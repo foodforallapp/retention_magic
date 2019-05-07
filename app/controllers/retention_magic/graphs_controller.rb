@@ -10,7 +10,7 @@ module RetentionMagic
       first_cohort_month = 12.months.ago.to_date.beginning_of_month
       today = Date.today
 
-      difference_in_days_between_now_and_first_cohort = (today.beginning_of_week - first_cohort_month).to_i
+      difference_in_days_between_now_and_first_cohort = (today.beginning_of_month - first_cohort_month).to_i
 
       # For presenting the widgets
       @current_cohort_label = today.strftime("%U/%Y")
