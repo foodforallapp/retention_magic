@@ -62,7 +62,7 @@ module RetentionMagic
         cohort_size = cohort_users.count
 
         difference_in_days_between_now_and_cohort_start = (today.beginning_of_month - cohort_start.to_date).to_i
-        number_of_months_in_this_cohort = difference_in_days_between_now_and_cohort_start / 7
+        number_of_months_in_this_cohort = difference_in_days_between_now_and_cohort_start / 30
 
         0.upto(number_of_months_in_this_cohort) do |month|
           retention_month = (cohort_start + month.months).beginning_of_month
