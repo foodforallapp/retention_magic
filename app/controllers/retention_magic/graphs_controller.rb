@@ -66,7 +66,6 @@ module RetentionMagic
 
         0.upto(number_of_months_in_this_cohort) do |month|
           retention_month = (cohort_start + month.months).beginning_of_month
-          
             retention_month_end = (retention_month + 1.month).beginning_of_month
 
             records_per_user = {}
@@ -84,7 +83,6 @@ module RetentionMagic
             else
               @graphs[:retention][cohort_start_label][retention_month] = records_per_user.keys.size
             end
-          end
         end
       end
 
